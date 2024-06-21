@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Car Database</title>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<h1>Car Database</h1>
+		</div>
+		<div id="add-container">
+			<h2>Add Car</h2>
+			<form
+				class="add-form"
+				@submit.prevent="addCar()">
+				<label id="form-input">
+					<input
+						type="text"
+						v-model="newCar.make"
+						placeholder="Make" />
+					<input
+						type="text"
+						v-model="newCar.model"
+						placeholder="Model" />
+					<input
+						type="number"
+						v-model="newCar.year"
+						placeholder="Year" />
+				</label>
+				<button>Add Car</button>
+			</form>
+		</div>
+		<div id="row"></div>
+		<script src="app.js"></script>
+	</body>
+</html>
